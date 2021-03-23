@@ -93,42 +93,44 @@ class _MyHomePageState extends State<MyHomePage> {
             // Center is a layout widget. It takes a single child and positions it
             // in the middle of the parent.
             child: Transform.rotate(
-              angle: -angle,
-              child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Row(
+                angle: -angle,
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ElevatedButton(
-                        onPressed: () => _decrementAngle(10),
-                        child: Text("-10")),
-                    Container(width: 10),
-                    ElevatedButton(
-                        onPressed: () => _decrementAngle(1), child: Text("-")),
-                    Container(width: 10),
-                    ElevatedButton(
-                        onPressed: () => _incrementAngle(1), child: Text("+")),
-                    Container(width: 10),
-                    ElevatedButton(
-                        onPressed: () => _incrementAngle(10),
-                        child: Text("+10")),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        ElevatedButton(
+                            onPressed: () => _decrementAngle(10),
+                            child: Text("-10")),
+                        Container(width: 10),
+                        ElevatedButton(
+                            onPressed: () => _decrementAngle(1),
+                            child: Text("-")),
+                        Container(width: 10),
+                        ElevatedButton(
+                            onPressed: () => _incrementAngle(1),
+                            child: Text("+")),
+                        Container(width: 10),
+                        ElevatedButton(
+                            onPressed: () => _incrementAngle(10),
+                            child: Text("+10")),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        ElevatedButton(
+                            onPressed: () => _setRotation(0),
+                            child: Text("Vynulovat")),
+                        Container(width: 10),
+                        ElevatedButton(
+                            onPressed: () => _setRotation(1130),
+                            child: Text("Otoč dokola")),
+                      ],
+                    ),
                   ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    ElevatedButton(
-                        onPressed: () => _setRotation(0),
-                        child: Text("Vynulovat")),
-                    Container(width: 10),
-                    ElevatedButton(
-                        onPressed: () => _setRotation(1130), child: Text("Otoč dokola")),
-                  ],
-                ),
-              ],
-              )
-            ),
+                )),
           ), // This trailing comma makes auto-formatting nicer for build methods.
         ));
   }
